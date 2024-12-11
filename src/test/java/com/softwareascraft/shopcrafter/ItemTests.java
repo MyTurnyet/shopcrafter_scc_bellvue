@@ -37,4 +37,10 @@ class ItemTests {
         Item item = new Item(0, "Jerry");
         assertThat(item.getCategory()).isEqualTo("Food");
     }
+
+    @Test
+    void isFoodReturnsTrue() {
+        Item item = new Item(0, "Jerry");
+        assertThat(item.hasCategory("Food")).isTrue();
+    }
 }

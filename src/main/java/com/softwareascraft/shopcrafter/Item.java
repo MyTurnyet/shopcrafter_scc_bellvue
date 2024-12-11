@@ -20,4 +20,8 @@ public class Item {
     public String getCategory() {
         return "Food";
     }
+
+    public boolean hasCategory(String category) {
+        return true;
+    }
 }
