@@ -10,4 +10,8 @@ public class Item {
     public int getSKU() {
         return this.sku;
     }
+
+    public String getName() {
+        return "Jerry";
+    }
 }

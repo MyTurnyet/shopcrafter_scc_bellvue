@@ -19,4 +19,10 @@ class ItemTests {
         Item item = new Item(2);
         assertThat(item.getSKU()).isEqualTo(2);
     }
+
+    @Test
+    void getNameReturnsJerry() {
+        Item item = new Item(0);
+        assertThat(item.getName()).isEqualTo("Jerry");
+    }
 }
