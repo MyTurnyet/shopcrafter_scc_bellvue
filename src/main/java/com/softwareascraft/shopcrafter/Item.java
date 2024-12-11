@@ -22,9 +22,6 @@ public class Item {
         return this.name;
     }
 
-    public String getCategory() {
-        return "Food";
-    }
 
     public boolean hasCategory(String category) {
         return Objects.equals(this.category, category);
