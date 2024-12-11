@@ -10,37 +10,43 @@ class ItemTests {
 
     @Test
     void getSKUReturns1() {
-        Item item= new Item(1, "Geoffrey");
+        Item item= new Item(1, "Geoffrey", "Food");
         assertThat(item.getSKU()).isEqualTo(1);
     }
 
     @Test
     void getSKUReturns2() {
-        Item item = new Item(2, "Geoffrey");
+        Item item = new Item(2, "Geoffrey", "Food");
         assertThat(item.getSKU()).isEqualTo(2);
     }
 
     @Test
     void getNameReturnsJerry() {
-        Item item = new Item(0, "Jerry");
+        Item item = new Item(0, "Jerry", "Food");
         assertThat(item.getName()).isEqualTo("Jerry");
     }
 
     @Test
     void getNameReturnsGeoffrey() {
-        Item item = new Item(0, "Geoffrey");
+        Item item = new Item(0, "Geoffrey", "Food");
         assertThat(item.getName()).isEqualTo("Geoffrey");
     }
 
     @Test
     void getCategoryReturnsFood() {
-        Item item = new Item(0, "Jerry");
+        Item item = new Item(0, "Jerry", "Food");
         assertThat(item.getCategory()).isEqualTo("Food");
     }
 
     @Test
     void isFoodReturnsTrue() {
-        Item item = new Item(0, "Jerry");
+        Item item = new Item(0, "Jerry", "Food");
         assertThat(item.hasCategory("Food")).isTrue();
+    }
+
+    @Test
+    void isGameReturnsFalse() {
+        Item item = new Item(0, "Jerry", "Food");
+        assertThat(item.hasCategory("Game")).isFalse();
     }
 }

@@ -1,12 +1,17 @@
 package com.softwareascraft.shopcrafter;
 
+import java.util.Objects;
+
 public class Item {
     private final int sku;
     private final String name;
+    private final String category;
 
-    public Item(int sku, String name) {
+    public Item(int sku, String name, String category) {
         this.sku = sku;
         this.name = name;
+
+        this.category = category;
     }
 
     public int getSKU() {
@@ -22,6 +27,6 @@ public class Item {
     }
 
     public boolean hasCategory(String category) {
-        return true;
+        return Objects.equals(this.category, category);
     }
 }
