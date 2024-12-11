@@ -6,9 +6,11 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Tag("Unit")
-class TesterTests {
+class ItemTests {
+
     @Test
-    void testTester() {
-        assertThat(true).isFalse();
+    void itemExists() {
+        Item item= new Item();
+        assertThat(item.getSKU()).isEqualTo(1);
     }
 }
