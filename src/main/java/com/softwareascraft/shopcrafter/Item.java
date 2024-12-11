@@ -16,4 +16,8 @@ public class Item {
     public String getName() {
         return this.name;
     }
+
+    public String getCategory() {
+        return "Food";
+    }
 }
