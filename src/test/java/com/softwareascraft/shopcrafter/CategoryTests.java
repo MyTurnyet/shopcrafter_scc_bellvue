@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Tag("Unit")
 class CategoryTests {
     @Test
-    void pants() {
+    void matchesCategory() {
         ItemCategory itemCategory = new ItemCategory();
         assertThat(itemCategory.isCategory("Food")).isTrue();
     }
